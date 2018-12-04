@@ -23,7 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background"
         app:layout_constraintVertical_bias="0.188"
-        app:srcCompat="@drawable/new_bg"
         android:contentDescription="@string/image_1" />
 
     <ImageView
@@ -36,7 +35,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.267"
-        app:srcCompat="@drawable/apple_raw" />
+        app:layout_constraintVertical_bias="0.267"/>
 
 </android.support.constraint.ConstraintLayout>
