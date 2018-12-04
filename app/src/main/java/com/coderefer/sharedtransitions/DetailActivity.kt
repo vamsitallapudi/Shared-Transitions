@@ -1,26 +1,38 @@
 package com.coderefer.sharedtransitions
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import kotlinx.android.synthetic.main.activity_detail.*
 
-public const val EXTRA_CONTENT = "EXTRA_CONTENT"
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+        imageView.setImageResource(getResourceId(this, intent.getStringExtra(MainActivity.TAG_KEY)))
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
         supportFinishAfterTransition()
+        super.onBackPressed()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-         when(item!!.itemId){
-             R.id.home -> supportFinishAfterTransition()
+         when(item?.itemId){
+             android.R.id.home ->  {
+                 supportFinishAfterTransition()
+                 return true
+             }
          }
         return super.onOptionsItemSelected(item)
 
+    }
+
+
+    fun getResourceId(context: Context, drawableName:String): Int {
+        val resources = context.resources
+        return resources.getIdentifier(drawableName, "drawable",
+                context.packageName)
     }
 }

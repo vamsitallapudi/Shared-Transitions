@@ -9,13 +9,10 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- enable window content transitions -->
         <item name="android:windowActivityTransitions">true</item>
 
-        <!-- specify enter and exit transitions -->
-        <item name="android:windowEnterTransition">@transition/explode</item>
-        <item name="android:windowExitTransition">@transition/explode</item>
 
         <!-- specify shared element transitions -->
         <item name="android:windowSharedElementEnterTransition">
