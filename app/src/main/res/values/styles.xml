@@ -13,12 +13,11 @@
         <!-- enable window content transitions -->
         <item name="android:windowActivityTransitions">true</item>
 
-
-        <!--&lt;!&ndash; specify shared element transitions &ndash;&gt;-->
-        <!--<item name="android:windowSharedElementEnterTransition">-->
-            <!--@transition/explode</item>-->
-        <!--<item name="android:windowSharedElementExitTransition">-->
-            <!--@transition/explode</item>-->
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/explode</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/explode</item>
     </style>
 
 </resources>

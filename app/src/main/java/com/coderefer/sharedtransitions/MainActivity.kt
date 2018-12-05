@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
     private fun startDetailActivity(view : View) {
         val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra(TAG_KEY, view.tag.toString())
-        val activityOptionsCompat = ActivityOptionsCompat
-                .makeSceneTransitionAnimation(this, view, ViewCompat.getTransitionName(view))
+        val activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, resources.getString(R.string.transition_name))
         startActivity(intent, activityOptionsCompat.toBundle())
     }
 
